@@ -1,0 +1,256 @@
+<?xml version="1.0" ?>
+<robot name="omni-vehicle" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find omni-vehicle_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find omni-vehicle_description)/urdf/omni-vehicle.trans" />
+<xacro:include filename="$(find omni-vehicle_description)/urdf/omni-vehicle.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="1.6985832945975e-05 8.685100085408246e-05 0.24495092321540418" rpy="0 0 0"/>
+    <mass value="6.161982035237645"/>
+    <inertia ixx="0.743729" iyy="0.551485" izz="1.218598" ixy="-2.6e-05" iyz="-6e-06" ixz="-9e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_1">
+  <inertial>
+    <origin xyz="1.9330882372603497e-07 0.016095086639288714 -0.015347240471151935" rpy="0 0 0"/>
+    <mass value="0.01529886716118361"/>
+    <inertia ixx="5.2e-05" iyy="4e-06" izz="5.6e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.311012 -0.391088 -0.296937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.311012 -0.391088 -0.296937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_1">
+  <inertial>
+    <origin xyz="-0.37547993531241336 0.2858409281828971 -0.3861013474419888" rpy="0 0 0"/>
+    <mass value="1.3381613146608942"/>
+    <inertia ixx="0.006326" iyy="0.003707" izz="0.003309" ixy="0.0" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.686478 -0.107216 -0.490544" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.686478 -0.107216 -0.490544" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_2">
+  <inertial>
+    <origin xyz="-1.933088160654961e-07 0.016095086639288714 -0.015347240471151935" rpy="0 0 0"/>
+    <mass value="0.01529886716118361"/>
+    <inertia ixx="5.2e-05" iyy="4e-06" izz="5.6e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.311012 -0.391088 -0.296937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/caster_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.311012 -0.391088 -0.296937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/caster_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_2">
+  <inertial>
+    <origin xyz="0.24654467806994657 0.28584092818289697 -0.386101347441989" rpy="0 0 0"/>
+    <mass value="1.3381613146608942"/>
+    <inertia ixx="0.006326" iyy="0.003707" izz="0.003309" ixy="0.0" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.557571 -0.107216 -0.490544" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/wheel_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.557571 -0.107216 -0.490544" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/wheel_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_4">
+  <inertial>
+    <origin xyz="1.9330882272683425e-07 0.016094700021649977 -0.015347240471153156" rpy="0 0 0"/>
+    <mass value="0.01529886716118361"/>
+    <inertia ixx="5.2e-05" iyy="4e-06" izz="5.6e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.311012 0.390936 -0.296937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/caster_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.311012 0.390936 -0.296937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/caster_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_3">
+  <inertial>
+    <origin xyz="-1.933088160654961e-07 0.016094700021649366 -0.015347240471153212" rpy="0 0 0"/>
+    <mass value="0.01529886716118361"/>
+    <inertia ixx="5.2e-05" iyy="4e-06" izz="5.6e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.311012 0.390936 -0.296937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/caster_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.311012 0.390936 -0.296937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/caster_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_3">
+  <inertial>
+    <origin xyz="0.24654467806994668 0.2858405415652577 0.3959236525580096" rpy="0 0 0"/>
+    <mass value="1.3381613146608942"/>
+    <inertia ixx="0.006326" iyy="0.003707" izz="0.003309" ixy="0.0" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.557571 0.674808 0.291481" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/wheel_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.557571 0.674808 0.291481" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/wheel_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_4">
+  <inertial>
+    <origin xyz="-0.37547993531241414 0.2858405415652579 0.39592365255800954" rpy="0 0 0"/>
+    <mass value="1.3381613146608942"/>
+    <inertia ixx="0.006326" iyy="0.003707" izz="0.003309" ixy="0.0" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.686478 0.674808 0.291481" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/wheel_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.686478 0.674808 0.291481" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://omni-vehicle_description/meshes/wheel_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="front_right_str" type="continuous">
+  <origin xyz="0.311012 0.391088 0.296937" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="caster_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="front_right_off" type="prismatic">
+  <origin xyz="0.375466 -0.283872 0.193607" rpy="0 0 0"/>
+  <parent link="caster_1"/>
+  <child link="wheel_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+  <limit upper="0.0" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="front_left_str" type="continuous">
+  <origin xyz="-0.311012 0.391088 0.296937" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="caster_2"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="front_left_off" type="prismatic">
+  <origin xyz="-0.246559 -0.283872 0.193607" rpy="0 0 0"/>
+  <parent link="caster_2"/>
+  <child link="wheel_2"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+  <limit upper="0.0" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="rear_right_str" type="continuous">
+  <origin xyz="0.311012 -0.390936 0.296937" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="caster_4"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="rear_left_str" type="continuous">
+  <origin xyz="-0.311012 -0.390936 0.296937" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="caster_3"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="rear_left_off" type="prismatic">
+  <origin xyz="-0.246559 -0.283872 -0.588418" rpy="0 0 0"/>
+  <parent link="caster_3"/>
+  <child link="wheel_3"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+  <limit upper="0.0" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="rear_right_off" type="prismatic">
+  <origin xyz="0.375466 -0.283872 -0.588418" rpy="0 0 0"/>
+  <parent link="caster_4"/>
+  <child link="wheel_4"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+  <limit upper="0.0" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+</robot>

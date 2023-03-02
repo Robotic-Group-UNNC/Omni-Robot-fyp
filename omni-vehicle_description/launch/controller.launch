@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find omni-vehicle_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/omni_vehicle" args="front_right_str_position_controller front_right_off_position_controller front_left_str_position_controller front_left_off_position_controller rear_right_str_position_controller rear_left_str_position_controller rear_left_off_position_controller rear_right_off_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/omni_vehicle/joint_states"/>
+</node>
+
+</launch>

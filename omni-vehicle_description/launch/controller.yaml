@@ -1,0 +1,39 @@
+omni_vehicle:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  front_right_str_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_right_str
+    pid: {p: 10.0, i: 0.01, d: 0.01}
+  front_right_off_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_right_off
+    pid: {p: 10.0, i: 0.01, d: 0.01}
+  front_left_str_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_left_str
+    pid: {p: 10.0, i: 0.01, d: 0.01}
+  front_left_off_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_left_off
+    pid: {p: 10.0, i: 0.01, d: 0.01}
+  rear_right_str_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rear_right_str
+    pid: {p: 10.0, i: 0.01, d: 0.01}
+  rear_left_str_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rear_left_str
+    pid: {p: 10.0, i: 0.01, d: 0.01}
+  rear_left_off_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rear_left_off
+    pid: {p: 10.0, i: 0.01, d: 0.01}
+  rear_right_off_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rear_right_off
+    pid: {p: 10.0, i: 0.01, d: 0.01}
